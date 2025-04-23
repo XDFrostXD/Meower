@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог косметики</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Meower</h1>
+        <p>Обмяужительные цветы</p>
+        <a href="cart.html" class="cart-link">Корзина (<span id="cart-count">0</span>)</a>
+    </header>
+
+    <main>
+        <section class="catalog">
+            <!-- Товар 1 -->
+            <div class="product-card" data-id="1" data-name="Муяпаны" data-price="600">
+                <img src="images/tulpan.png" alt="Мяупаны">
+                <h3>Мяупаны</h3>
+                <span class="price">600 руб</span>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </div>
+
+            <!-- Товар 2 -->
+            <div class="product-card" data-id="2" data-name="Рррозы" data-price="900">
+                <img src="images/rose.png" alt="Рррозы">
+                <h3>Рррозы</h3>
+                <span class="price">900 руб</span>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </div>
+
+            <!-- Товар 3 -->
+            <div class="product-card" data-id="3" data-name="Гвоздики" data-price="500">
+                <img src="images/gvozd.png" alt="Гвоздики">
+                <h3>Гвоздики</h3>
+                <span class="price">500 руб</span>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </div>
+
+            <!-- Товар 4 -->
+            <div class="product-card" data-id="4" data-name="Муррмашки" data-price="400">
+                <img src="images/romaski.png" alt="Муррмашки">
+                <h3>Муррмашки</h3>
+                <span class="price">400 руб</span>
+                <button class="add-to-cart">Добавить в корзину</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Добавить в корзину</h2>
+            <img id="modal-product-image" src="" alt="Изображение товара" class="modal-product-image">
+            <p id="modal-product-name"></p>
+            <p id="modal-product-price"></p>
+            <label for="quantity">Количество:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+            <div class="modal-buttons">
+                <button id="confirm-add-to-cart">Добавить</button>
+                <button id="cancel-add-to-cart">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Интернет магазин цветов "Meower". Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
