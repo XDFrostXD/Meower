@@ -136,3 +136,22 @@ function renderCart() {
         });
     });
 }
+
+// Обработчик кнопки "Купить"
+const purchaseBtn = document.getElementById("purchase-btn");
+if (purchaseBtn) {
+    purchaseBtn.addEventListener("click", function() {
+        if (cart.length === 0) {
+            alert("Корзина пуста. Добавьте товары перед покупкой.");
+            return;
+        }
+
+        const confirmed = confirm("Вы уверены, что хотите оформить заказ?");
+        if (confirmed) {
+            cart = [];
+            saveCart();
+            updateCartCount();
+            window.location.href = "confirmation.html";
+        }
+    });
+}
